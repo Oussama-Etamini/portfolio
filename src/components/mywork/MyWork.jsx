@@ -13,9 +13,14 @@ function MyWork() {
             <div className="mywork-container">
                 {Work_Data.map((work) => {
                     return (
-                            <div>
-                                <img src={work.w_img} alt={work.w_name} />
-                            </div>
+                        <div className="mywork-item" key={work.id}>
+                            <Link to={`/work/${work.slug}`} aria-label={`Open ${work.w_name} details`}>
+                                <img src={work.sections?.[0]?.img} alt={work.w_name} />
+                                {/* <div className="mywork-item-overlay">
+                                    <p>{work.w_name}</p>
+                                </div> */}
+                            </Link>
+                        </div>
                     );
                 })}
             </div>

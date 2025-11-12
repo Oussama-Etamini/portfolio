@@ -1,0 +1,110 @@
+/* Styles for zig-zag (Z) layout: image <-> description alternating rows */
+
+.workdetail {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.work-title {
+    font-size: 2rem;
+    margin: 0 0 28px 0;
+    text-align: center;
+    color: var(--text);
+}
+
+/* row grid: two columns, image + content */
+.work-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image content";
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* swap areas when img should appear on the right */
+.work-row.img-right {
+    grid-template-areas: "content image";
+}
+
+/* assign areas */
+.work-row .work-image {
+    grid-area: image;
+}
+
+.work-row .work-content {
+    grid-area: content;
+}
+
+/* image styles */
+.work-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 8px 24px rgba(15, 15, 15, 0.08);
+}
+
+/* content styles */
+.work-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    color: var(--text);
+}
+
+.work-content p {
+    margin: 0 0 12px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.work-content .tech {
+    margin-top: 6px;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+/* actions */
+.work-actions {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.work-actions .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+}
+
+/* responsive: stack rows on small screens */
+@media (max-width: 768px) {
+    .work-row {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "content";
+    }
+
+    .work-row.img-right,
+    .work-row.img-left {
+        grid-template-areas:
+            "image"
+            "content";
+    }
+
+    .work-image img {
+        max-height: 320px;
+    }
+
+    .work-title { font-size: 1.6rem; }
+}

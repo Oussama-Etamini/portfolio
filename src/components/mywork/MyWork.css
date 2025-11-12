@@ -6,6 +6,9 @@
     gap: 50px;
     margin: 40px 130px;
 }
+.mywork-item{
+    
+}
 .mywork-title{
     position: relative;
 }
@@ -25,6 +28,8 @@
    height: 200px;
    transition: 0.3s;
    cursor: pointer; 
+    border: 1px solid #000;
+
 }
 .mywork-container img:hover{
     transform: scale(1.10);
