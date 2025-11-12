@@ -12,10 +12,10 @@ function Footer() {
             </div>
             <div className="footer-top-right">
                 <div className="footer-email-input">
-                <i class="fa-regular fa-user" style={{ fontSize: '15px' }}></i>
-                <input type="text" placeholder='Enter your email'/>
+                  <i className="fa-regular fa-user" style={{ fontSize: '15px', color: 'var(--text)' }}></i>
+                  <input className="footer-input" type="text" placeholder='Enter your email'/>
                 </div>
-                <div className="footer-subscribe">Subscribe</div>
+                <button className="footer-subscribe" type="button">Subscribe</button>
             </div>
         </div>
         <hr />

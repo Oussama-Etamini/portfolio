@@ -1,3 +1,5 @@
+/* Updated to use theme variables so light/dark transitions work smoothly */
+
 .contact{
     display: flex;
     flex-direction: column;
@@ -5,6 +7,8 @@
     justify-content: center;
     gap: 50px;
     margin: 20px 130px;
+    color: var(--text); /* use theme text variable */
+    transition: color .25s ease, background .25s ease;
 }
 .contact-title h1{
     padding: 0px 20px;
@@ -13,6 +17,7 @@
     position: relative;
     top: 35px;
     margin-bottom: 30px;
+    color: var(--text);
 }
 .contact-section{
     display: flex;
@@ -33,7 +38,7 @@
 }
 .contact-left p{
     max-width: 500px;
-    color: #D8D8D8;
+    color: var(--text);
     font-size: 18px;
     line-height: 25px;
 }
@@ -41,7 +46,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: #D8D8D8;
+    color: var(--text);
     font-size: 18px;
 }
 .contact-detail{
@@ -56,38 +61,49 @@
     gap: 20px;
 }
 .contact-right label{
-    color: #D8D8D8;
+    color: var(--text);
     font-size: 18px;
     font-weight: 400;
 }
 #icon{
     font-size: 22px;
+    color: var(--text);
 }
+
+/* inputs use card-bg so they adapt to theme */
 .contact-right input{
     width: 500px;
     height: 45px;
     border: none;
     outline: none;
-    background: #32323c;
+    background: var(--card-bg);
     border-radius: 4px;
-    color: #A0A0A0;
+    color: var(--text);
     font-family: 'outfit';
     font-size: 15px;
     padding-left: 15px;
+    transition: background .2s ease, color .2s ease, border .15s ease;
+}
+.contact-right input::placeholder{
+    color: var(--muted);
 }
 .contact-right input:focus{
-    border: 1px solid white;
+    border: 1px solid var(--accent);
 }
 .contact-right textarea{
     width: 477px;
     border: none;
     padding: 20px;
     border-radius: 4px;
-    background: #32323c;
-    color: #A0A0A0;
+    background: var(--card-bg);
+    color: var(--text);
     font-family: 'outfit';
     font-size: 15px;
     resize: none;    
+    transition: background .2s ease, color .2s ease;
+}
+.contact-right textarea::placeholder{
+    color: var(--muted);
 }
 .submitBtn {
     width: 120px;
@@ -101,7 +117,7 @@
     gap: 8px;
     font-weight: 600;
     cursor: pointer;
-    color: white;
+    color: var(--bg); /* button text uses bg to contrast with accent */
     background: linear-gradient(to left,rgb(219, 147, 39),rgb(174, 0, 255));
     letter-spacing: 0.7px;
     margin-bottom: 40px;
@@ -128,7 +144,18 @@
     transform: scale(0.97);
   }
   
-  @media(max-width: 786px){
+  /* Make icons inside submit button follow the submit text color (which uses --bg),
+   so they switch automatically between moods instead of staying black */
+.submitBtn .arrow,
+.submitBtn .share,
+.submitBtn i,
+.submitBtn svg {
+  color: var(--bg) !important;
+  fill: var(--bg) !important;
+  stroke: var(--bg) !important;
+}
+
+@media(max-width: 786px){
     .contact{
         align-items: start;
         gap: 70px;
