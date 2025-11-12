@@ -68,10 +68,19 @@
         transition: right 0.5s;
         right: -250px;
         gap: 30px;
+
+        /* ensure sidebar text is always white */
+        color: #ffffff;
     }
    .nav-menu li{
     font-size: 20px;
     padding-left: 100px;
     padding-top: 5px;
+    color: var(--navbar-text);
+   }
+
+   /* Force p inside sidebar to be white regardless of inline styles */
+   .nav-menu li p {
+     color: #ffffff !important;
    }
 }
