@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function MyWork() {
     return (
-        <div id='mywork' className='mywork'>
+        <div id="mywork" className="mywork">
             <div className="mywork-title">
                 <h1> My latest work </h1>
             </div>

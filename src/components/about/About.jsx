@@ -20,10 +20,11 @@ function About() {
                     <p>My passion for full stack development is not only reflected in my extensive experience but also in the enthusiasm and dedication i bring to each project.</p>
                 </div>
                 <div className="about-skills">
-                    <div className="about-skill"><p>HTML & CSS & Tailwind</p><hr style={{width:'60%'}}/></div>
-                    <div className="about-skill"><p>JavaScript & React JS</p><hr style={{width:'40%'}}/></div>
-                    <div className="about-skill"><p>PHP & Laravel</p><hr style={{width:'45%'}}/></div>
-                    <div className="about-skill"><p>MySQL & MongoDB</p><hr style={{width:'20%'}}/></div>
+                    <div className="about-skill"><p>HTML & CSS & Tailwind</p><hr style={{width:'80%'}}/></div>
+                    <div className="about-skill"><p>JavaScript & React JS</p><hr style={{width:'50%'}}/></div>
+                    <div className="about-skill"><p>PHP & Laravel</p><hr style={{width:'60%'}}/></div>
+                    <div className="about-skill"><p>MySQL & MongoDB</p><hr style={{width:'40%'}}/></div>
+                    <div className="about-skill"><p>Git, GitHub, Postman</p><hr style={{width:'40%'}}/></div>
                 </div>
             </div>
         </div>

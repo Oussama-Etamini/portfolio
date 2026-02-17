@@ -1,11 +1,40 @@
 /* Styles for zig-zag (Z) layout: image <-> description alternating rows */
 
 .workdetail {
+    min-height: 100vh;      /* full viewport height */
+    display: flex;
+    flex-direction: column;
     padding: 40px 20px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     color: var(--text);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+.tech-summary {
+    margin: 0 0 24px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.98rem;
+  }
+/* push Back button to the bottom */
+.work-actions {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 20px;          /* distance from bottom */
+    text-align: center;
+    z-index: 100;          /* stay above content */
+}
+
+/* keep your existing button style, or refine it a bit */
+.work-actions .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
 }
 
 .work-title {
@@ -15,19 +44,41 @@
     color: var(--text);
 }
 
+.title {
+    font-size: 1.25rem;
+    margin: 0 0 28px 0;
+    text-align: center;
+    color: var(--text);
+    word-spacing: 20px;
+    letter-spacing: 5px;
+
+}
+
 /* row grid: two columns, image + content */
 .work-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "image content";
+    /* default: image left, text right */
     gap: 28px;
     align-items: center;
     margin-bottom: 40px;
 }
 
-/* swap areas when img should appear on the right */
+/* when we want image on the right, swap the areas */
 .work-row.img-right {
     grid-template-areas: "content image";
+}
+
+/* (optional but clear) keep img-left explicit */
+.work-row.img-left {
+    grid-template-areas: "image content";
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--text);
 }
 
 /* assign areas */
@@ -40,14 +91,27 @@
 }
 
 /* image styles */
+.work-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto;
+}
+
 .work-image img {
     width: 100%;
-    height: 100%;
-    max-height: 460px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: auto;
+    /* keep original aspect ratio */
+    object-fit: contain;
     display: block;
+    border-radius: 10px;
     box-shadow: 0 8px 24px rgba(15, 15, 15, 0.08);
+}
+
+.work-image.tall img {
+    width: auto;
+    height: 380px;
+    object-fit: contain;
 }
 
 /* content styles */
@@ -106,5 +170,7 @@
         max-height: 320px;
     }
 
-    .work-title { font-size: 1.6rem; }
+    .work-title {
+        font-size: 1.6rem;
+    }
 }

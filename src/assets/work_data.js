@@ -10,8 +10,53 @@ import ecommerce from "../assets/images/ecommerce.png";
 const work_data = [
     {
         id: 1,
+        w_name: "Stock Management",
+        slug: "stock-management-system",
+        category: "Inventory management system",
+        technologies: [ "LARAVEL", "MySQL", "JavaScript","Tailwind CSS"],
+        demo: "",
+        repo: null,
+        sections: [
+            {
+                img: stock,
+                description: "",
+            },
+        ],
+    },
+    {
+        id: 2,
+        w_name: "ecommerce",
+        slug: "Ecommerce-Platform",
+        category: "E-commerce platform",
+        technologies: ["React", "Tailwind CSS","Stripe"],
+        demo: "",
+        repo: null,
+        sections: [
+            {
+                img: ecommerce,
+                description: "E-commerce platform with responsive design, product catalog, shopping cart, and checkout process.",
+            },
+        ],
+    },
+    {
+        id: 3,
+        w_name: "Spotify",
+        slug: "spotify-clone",
+        category: "Music streaming platform",
+        technologies: ["React", "CSS"],
+        demo: "https://spotify-react-css.netlify.app/",
+        repo: null,
+        sections: [
+            {
+                img: spotify,
+                description: "Hero section with responsive banner, animated CTA and slider.",
+            },
+        ],
+    },
+    {
+        id: 4,
         w_name: "BMW",
-        slug: "bmw-react-tailwind",
+        slug: "bmw-marketing-site",
         category: "Marketing site",
         technologies: ["React", "Tailwind CSS"],
         demo: "https://bmw-clone-react-tailwind.netlify.app/",
@@ -25,11 +70,11 @@ const work_data = [
         ],
     },
     {
-        id: 2,
+        id: 5,
         w_name: "logistikos",
-        slug: "",
-        category: "",
-        technologies: [],
+        slug: "logistikos-website",
+        category: "Logistics company website",
+        technologies: ["laravel", "MySQL", "JavaScript","Bootstrap"],
         demo: "",
         repo: null,
         sections: [
@@ -40,41 +85,11 @@ const work_data = [
         ],
     },
     {
-        id: 3,
-        w_name: "Spotify",
-        slug: "",
-        category: "",
-        technologies: [],
-        demo: "",
-        repo: null,
-        sections: [
-            {
-                img: spotify,
-                description: "",
-            },
-        ],
-    },
-    {
-        id: 4,
-        w_name: "stock",
-        slug: "",
-        category: "",
-        technologies: [],
-        demo: "",
-        repo: null,
-        sections: [
-            {
-                img: stock,
-                description: "",
-            },
-        ],
-    },
-    {
-        id: 5,
+        id: 6,
         w_name: "loginS",
-        slug: "",
-        category: "",
-        technologies: [],
+        slug: "login-system",
+        category: "Login system",
+        technologies: ["PHP", "MySQL","Bootstrap","JavaScript","JQuery"],
         demo: "",
         repo: null,
         sections: [
@@ -85,31 +100,16 @@ const work_data = [
         ],
     },
     {
-        id: 6,
+        id: 7,
         w_name: "cimr",
-        slug: "",
-        category: "",
-        technologies: [],
+        slug: "cimr-website",
+        category: "CIMR website",
+        technologies: ["React", "MySQL","Bootstrap","CSS"],
         demo: "",
         repo: null,
         sections: [
             {
                 img: cmir,
-                description: "",
-            },
-        ],
-    },
-    {
-        id: 7,
-        w_name: "ecommerce",
-        slug: "",
-        category: "",
-        technologies: [],
-        demo: "",
-        repo: null,
-        sections: [
-            {
-                img: ecommerce,
                 description: "",
             },
         ],
