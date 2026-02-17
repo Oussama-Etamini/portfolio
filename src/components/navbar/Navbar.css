@@ -83,4 +83,11 @@
    .nav-menu li p {
      color: #ffffff !important;
    }
+
+   /* Move theme toggle to bottom-right on mobile */
+   .theme-toggle {
+     top: auto !important;
+     bottom: 20px !important;
+     right: 20px !important;
+   }
 }
