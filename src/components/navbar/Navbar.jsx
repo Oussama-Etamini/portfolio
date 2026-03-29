@@ -52,11 +52,11 @@ function Navbar(props) {
       <i onClick={openClick} class="fa-solid fa-bars" id='menu-icon'></i>
       <ul ref={menuRef} className='nav-menu'>
       <i onClick={closeClick} class="fa-solid fa-xmark" id='close-icon'></i>
-        <li onClick={() => setMenu("Home")}><AnchorLink className='anchor-link' offset={50} href='#home'><p style={{ color: menu === "Home" ? "orange" : navlinkColor }}>Home</p></AnchorLink></li>
-        <li onClick={() => setMenu("About")}><AnchorLink className='anchor-link' offset={50} href='#about'><p style={{ color: menu === "About" ? "orange" : navlinkColor }}>About</p></AnchorLink></li>
-        <li onClick={() => setMenu("Services")}><AnchorLink className='anchor-link' offset={50} href='#services'><p style={{ color: menu === "Services" ? "orange" : navlinkColor }}>Services</p></AnchorLink></li>
-        <li onClick={() => setMenu("Portfolio")}><AnchorLink className='anchor-link' offset={50} href='#mywork'><p style={{ color: menu === "Portfolio" ? "orange" : navlinkColor }}>Portfolio</p></AnchorLink></li>
-        <li onClick={() => setMenu("Contact")}><AnchorLink className='anchor-link' offset={50} href='#contact'><p style={{ color: menu === "Contact" ? "orange" : navlinkColor }}>Contact</p></AnchorLink></li>
+        <li onClick={() => setMenu("Home")}><AnchorLink className='anchor-link' offset={50} href='#home'><p style={{ color: menu === "Home" ? "orange" : navlinkColor }{closeClick}}>Home</p></AnchorLink></li>
+        <li onClick={() => setMenu("About")}><AnchorLink className='anchor-link' offset={50} href='#about'><p style={{ color: menu === "About" ? "orange" : navlinkColor }{closeClick}}>About</p></AnchorLink></li>
+        <li onClick={() => setMenu("Services")}><AnchorLink className='anchor-link' offset={50} href='#services'><p style={{ color: menu === "Services" ? "orange" : navlinkColor }{closeClick}}>Services</p></AnchorLink></li>
+        <li onClick={() => setMenu("Portfolio")}><AnchorLink className='anchor-link' offset={50} href='#mywork'><p style={{ color: menu === "Portfolio" ? "orange" : navlinkColor }{closeClick}}>Portfolio</p></AnchorLink></li>
+        <li onClick={() => setMenu("Contact")}><AnchorLink className='anchor-link' offset={50} href='#contact'><p style={{ color: menu === "Contact" ? "orange" : navlinkColor }{closeClick}}>Contact</p></AnchorLink></li>
       </ul>
       <AnchorLink className='anchor-link' offset={50} href='#contact'><div className="nav-connect">Connect With Me</div></AnchorLink>
     </div>
